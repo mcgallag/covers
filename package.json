@@ -1,23 +1,23 @@
 {
-    "name": "pixijs-getting-started",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "debug": "tsc -p tsconfig.json",
-        "compile": "tsc -p tsconfig.json",
-        "browserify": "browserify public/js/Program.js -o public/js/bundle.js",
-        "minify": "uglifyjs public/js/bundle.js -o public/js/bundle.min.js",
-        "release": "npm run compile && npm run browserify && npm run minify"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "pixi.js": "^5.2.1",
-        "typescript": "^3.7.5"
-    },
-    "devDependencies": {
-        "@types/requirejs": "^2.1.31"
-    }
+  "name": "pixijs-getting-started",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "debug": "tsc -w -p tsconfig.json",
+    "compile": "tsc -p tsconfig.json",
+    "browserify": "browserify public/js/Program.js -o public/js/bundle.js",
+    "minify": "uglifyjs public/js/bundle.js -o public/js/bundle.min.js",
+    "release": "npm run compile && npm run browserify && npm run minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pixi.js": "^5.2.1",
+    "typescript": "^3.7.5"
+  },
+  "devDependencies": {
+    "@types/requirejs": "^2.1.31"
+  }
 }
