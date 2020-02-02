@@ -1,4 +1,5 @@
 import * as PIXI from "pixijs";
+import { map } from "Util";
 
 export default class Game {
   private _app: PIXI.Application;
@@ -29,10 +30,13 @@ export default class Game {
   private Setup(): void {
     //Create the cat sprite
     let cat = new PIXI.Sprite(PIXI.Loader.shared.resources[this._imagePath].texture);
-    cat.transform.position.x = 100;
+    cat.transform.position.x = 500;
     cat.transform.position.y = 100;
     cat.transform.pivot.x = cat.width / 2;
     cat.transform.pivot.y = cat.height / 2;
+
+    let x = map(0.0, -1.0, 1.0, 0.0, 500.0);
+    console.log(`yayyyy?? ${x}`);
 
     //You can also create the `cat` sprite from the texture, like this:
     // let cat = new PIXI.Sprite(PIXI.utils.TextureCache["images/cat.png"]);
