@@ -1,15 +1,33 @@
-
 import * as PIXI from "pixijs";
 import Output from "./Output";
 import Game from "./Game";
 
-class Program
-{
-    public static Main(): void
+const assetIndex = "assets.json";
 
-    {
-        let game = new Game();
-    }
+class Program {
+  private game: Game;
+
+  public static Main(): void {
+    // this.loadAssetIndex();
+    let program = new Program();
+  }
+  
+  constructor() {
+    this.loadAssetIndex();
+    // this.game = new Game();
+  }
+
+  private loadAssetIndex() {
+    window.fetch(document.URL + assetIndex)
+      .then(response => {
+        if (response.ok) {
+          response.json()
+            .then(assetObj => {
+              console.log(assetObj.assets.length);
+            });
+        }
+      });
+  }
 }
 
 // Debug Version
